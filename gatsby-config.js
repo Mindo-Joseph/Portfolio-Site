@@ -35,7 +35,7 @@ accessToken : process.env.CONTENTFUL_ACCESS_TOKEN,
   {
     resolve: 'gatsby-source-medium',
     options: {
-      username: 'ndirangumindo' || '@medium',
+      username: '@ndirangumindo' || '@medium',
     },
   },
 ];
@@ -52,7 +52,7 @@ if (ANALYTICS_ID) {
 module.exports = {
   plugins,
   siteMetadata: {
-    isMediumUserDefined: !! 'ndirangumindo',
+    isMediumUserDefined: !! '@ndirangumindo',
     deterministic: !!DETERMINISTIC,
   },
 };
