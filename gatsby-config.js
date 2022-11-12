@@ -1,4 +1,3 @@
-const about = require('./about.json');
 
 require('dotenv').config();
 
@@ -12,11 +11,13 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: `${about.name} Portfolio`,
-      short_name: about.name,
+      name: `Joe Mindo Portfolio`,
+      short_name: 'joe',
       start_url: '/',
-      background_color: about.colors.background,
-      theme_color: about.colors.primary,
+background_color : "#FFFFFF",
+
+theme_color : "#364f6b",
+
       display: 'minimal-ui',
       icon: 'media/icon.png',
     },
@@ -32,7 +33,7 @@ const plugins = [
   {
     resolve: 'gatsby-source-medium',
     options: {
-      username: about.mediumUser || '@medium',
+      username: 'ndirangumindo' || '@medium',
     },
   },
 ];
@@ -49,7 +50,7 @@ if (ANALYTICS_ID) {
 module.exports = {
   plugins,
   siteMetadata: {
-    isMediumUserDefined: !!about.mediumUser,
+    isMediumUserDefined: !! 'ndirangumindo',
     deterministic: !!DETERMINISTIC,
   },
 };
